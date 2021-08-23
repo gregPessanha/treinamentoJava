@@ -3,19 +3,28 @@ package cursojava.executavel;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+
 import javax.swing.JOptionPane;
+
 import cursojava.classes.Aluno;
 import cursojava.classes.Disciplina;
+import cursojava.classes.Pessoa;
+import cursojava.classes.Secretario;
+import cursojava.classesauxiliares.FuncaoAutenticacao;
 import cursojava.constantes.StatusAluno;
+import cursojava.interfaces.PermitirAcesso;
 
 public class PrimeiraClasse {
 
 	public static void main(String[] args) {
 
 		String login = JOptionPane.showInputDialog("Digite o seu Login: ");
-		String senha = JOptionPane.showInputDialog("Digite a sua senha: ");
-
-		if (login.equalsIgnoreCase("admin") && senha.equalsIgnoreCase("admin")) {
+		int senha = Integer.parseInt(JOptionPane.showInputDialog("Digite a sua senha: "));
+		
+		FuncaoAutenticacao autenticacao = new FuncaoAutenticacao();
+		PermitirAcesso permitirAcesso = new Secretario();
+		
+		if (autenticacao.autenticar(permitirAcesso)) {
 
 			List<Aluno> alunos = new ArrayList<>();
 

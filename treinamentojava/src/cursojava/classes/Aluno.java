@@ -5,11 +5,37 @@ import java.util.List;
 
 import cursojava.constantes.StatusAluno;
 
-public class Aluno {
+public class Aluno extends Pessoa{
 
-	private String nome;
-	private int idade;
+	private String DataMatricula;
+	private String NomeEscola;
+	private String SerieMatriculado;
+	
 	private List<Disciplina> disciplinas = new ArrayList<Disciplina>();
+	
+	public String getDataMatricula() {
+		return DataMatricula;
+	}
+
+	public void setDataMatricula(String dataMatricula) {
+		DataMatricula = dataMatricula;
+	}
+
+	public String getNomeEscola() {
+		return NomeEscola;
+	}
+
+	public void setNomeEscola(String nomeEscola) {
+		NomeEscola = nomeEscola;
+	}
+
+	public String getSerieMatriculado() {
+		return SerieMatriculado;
+	}
+
+	public void setSerieMatriculado(String serieMatriculado) {
+		SerieMatriculado = serieMatriculado;
+	}
 	
 	public void setDisciplinas(List<Disciplina> disciplinas) {
 		this.disciplinas = disciplinas;
@@ -19,22 +45,6 @@ public class Aluno {
 		return disciplinas;
 	}
 	
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-	public int getIdade() {
-		return idade;
-	}
-
-	public void setIdade(int idade) {
-		this.idade = idade;
-	}
-
 	public double getMediaAluno() {
 		
 		double somaNotas = 0;
@@ -60,7 +70,16 @@ public class Aluno {
 	}
 	
 	@Override
+	public boolean maiorDeIdade() {
+		return idade >= 18;
+	}
+	
+	@Override
 	public String toString() {
 		return "Nome: " + nome + "\nIdade: " + idade;
+	}
+	
+	public double salario() {
+		return 1500;
 	}
 }
