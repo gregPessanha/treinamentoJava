@@ -23,22 +23,22 @@ public class ApachePoi {
 
 		Pessoa pessoa1 = new Pessoa();
 		pessoa1.setNome("José Maria da Silva Santos");
-		pessoa1.setIdade("67");
+		pessoa1.setIdade(67);
 		pessoa1.setEmail("josemariasantos@gmail.com");
 
 		Pessoa pessoa2 = new Pessoa();
 		pessoa2.setNome("Álvaro Aranha Arantes");
-		pessoa2.setIdade("75");
+		pessoa2.setIdade(75);
 		pessoa2.setEmail("alvaroarantes@yahoo.com");
 
 		Pessoa pessoa3 = new Pessoa();
 		pessoa3.setNome("Marina Ruy Barbosa");
-		pessoa3.setIdade("27");
+		pessoa3.setIdade(27);
 		pessoa3.setEmail("marinaruybarbosa@live.com");
 
 		Pessoa pessoa4 = new Pessoa();
 		pessoa4.setNome("Carlos Antônio Henrique Gonçalves");
-		pessoa4.setIdade("50");
+		pessoa4.setIdade(50);
 		pessoa4.setEmail("carlosgoncalves@gmail.com");
 
 		List<Pessoa> pessoas = new ArrayList<>();

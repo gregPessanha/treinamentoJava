@@ -3,7 +3,7 @@ package cursojava.javaIO;
 public class Pessoa {
 
 	private String nome;
-	private String idade;
+	private int idade;
 	private String email;
 
 	@Override
@@ -27,11 +27,11 @@ public class Pessoa {
 		this.email = email;
 	}
 
-	public String getIdade() {
+	public int getIdade() {
 		return idade;
 	}
 
-	public void setIdade(String dados) {
+	public void setIdade(int dados) {
 		this.idade = dados;
 	}
 

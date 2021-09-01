@@ -27,7 +27,7 @@ public class LendoArquivosTxt {
 				
 				Pessoa pessoa = new Pessoa();
 				pessoa.setNome(dados[0]);
-				pessoa.setIdade(dados[1]);
+				pessoa.setIdade(Double.valueOf(dados[1]).intValue());
 				pessoa.setEmail(dados[2]);
 				
 				pessoas.add(pessoa);

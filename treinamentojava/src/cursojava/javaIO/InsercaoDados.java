@@ -26,7 +26,7 @@ public class InsercaoDados {
 			String emailPessoa = JOptionPane.showInputDialog("Digite o e-mail da pessoa: ");
 
 			pessoa.setNome(nomePessoa);
-			pessoa.setIdade(idadePessoa);
+			pessoa.setIdade(Double.valueOf(idadePessoa).intValue());
 			pessoa.setEmail(emailPessoa);
 
 			pessoas.add(pessoa);
